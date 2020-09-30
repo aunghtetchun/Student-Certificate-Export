@@ -1,0 +1,64 @@
+*{
+    background: #fbfcfe;
+}
+.icon{
+    color: green;
+    font-size: 30px;
+    background: #dcfaf8;
+}
+.icon_bg{
+    background: #dcfaf8;
+}
+.card_one{
+    border-radius: 15px ;
+    border: 1px solid rgb(112, 156, 127);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+}
+.card_text h1{
+    font-size: 43px;
+    font-weight: bolder;
+    color: #343c6a;
+}
+.card_text p{
+    font-size: 15px;
+    color: rgba(60, 67, 106, 0.89);
+}
+.effect_bth{
+    color: #6f96d4;
+    border-radius: 13px;
+    border: 1px solid rgb(251, 255, 255);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.09), 0 3px 1px -2px rgba(0, 0, 0, 0.07), 0 1px 5px 0 rgba(0, 0, 0, 0.14);
+}
+.effect_bth:hover{
+    color: #5f87c7;
+}
+.color_btn{
+    color: rgba(255, 255, 255, 0.93);
+    background: #3365ff;
+    border-radius: 15px;
+}
+.color_btn:hover{
+    border-color: #3365ff;
+    color: #3365ff;
+    background: transparent;
+}
+.outline_btn:hover{
+    color: rgba(255, 255, 255, 0.93);
+    background: #3365ff;
+}
+.outline_btn{
+    border-color: #3365ff;
+    color: #3365ff;
+    background: transparent;
+    border-radius: 15px;
+}
+.bg_bth{
+    color: #16dbcc;
+    background: #dcfaf8;
+    border-radius: 19px;
+}
+.bg_bth:hover{
+    color: #16dbcc;
+    background: #d8fdfb;
+    border-radius: 19px;
+}
