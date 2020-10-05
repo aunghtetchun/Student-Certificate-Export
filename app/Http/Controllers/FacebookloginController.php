@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
+use Laravel\Socialite\SocialiteServiceProvider;
 
 class FacebookloginController extends Controller
 {
@@ -29,7 +30,6 @@ class FacebookloginController extends Controller
      */
     public function callback()
     {
-
         $socialite = Socialite::driver('facebook')->stateless()->user();
 //        return dd($socialite);
 
@@ -38,7 +38,7 @@ class FacebookloginController extends Controller
         if($finduser){
 
             Auth::login($finduser);
-            return redirect()->route("f.index");
+            return redirect()->route("s.index");
 
         }else{
 
@@ -58,30 +58,8 @@ class FacebookloginController extends Controller
             $user->save();
             Auth::login($user);
 
-            return redirect()->route("f.index");
+            return redirect()->route("s.index");
 
         }
     }
-//    public function callback()
-//    {
-////         return "hello";
-//        $userSocial = Socialite::driver('facebook')->stateless()->user();
-//        return dd($userSocial);
-//        $finduser = User::where('social_id', $userSocial->id)->first();
-//        if($finduser){
-//            Auth::login($finduser);
-//            return redirect()->route("f.index");
-//
-//        }else{
-//            $new_user = User::create([
-//                'name'      => $userSocial->name,
-//                'email'      => $userSocial->email,
-//                'photo'  => $userSocial->avatar_original,
-//                'password' => Hash::make(Custom::makePassword()),
-//                'social_id'=> $userSocial->id
-//            ]);
-//            Auth::login($new_user);
-//            return redirect()->route("f.index");
-//        }
-//    }
 }

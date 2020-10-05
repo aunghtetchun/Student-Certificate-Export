@@ -6,9 +6,9 @@
             <div class="pb-3">
                 <a class="text-uppercase" href="{{ route('home') }}"><i class="feather-home"></i></a>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Batch</span>
+                <span class="text-uppercase">BATCH</span>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Add Batch</span>
+                <a class="text-uppercase" href="{{ route('batch.create') }}">ADD BATCH</a>
             </div>
         </div>
         <div class="col-12 col-xl-7">

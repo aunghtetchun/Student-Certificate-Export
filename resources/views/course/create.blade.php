@@ -6,9 +6,9 @@
             <div class="pb-3">
                 <a class="text-uppercase" href="{{ route('home') }}"><i class="feather-home"></i></a>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Course</span>
+                <span class="text-uppercase">COURSE</span>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Create Course</span>
+                <span class="text-uppercase">ADD COURSE</span>
             </div>
         </div>
 

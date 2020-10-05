@@ -31,13 +31,13 @@
             </li>
 
             <li>
-                <a class="menu-item" href="{{ route('access.index') }}">
+                <a class="menu-item" href="{{ route('access.create') }}">
                     <span>
                         <i class="feather-archive mr-1"></i>
                         Access
                     </span>
                     <span class="badge badge-pill badge-light shadow-sm">
-                        7
+                        {{ $accessList->count() }}
                     </span>
                 </a>
             </li>
@@ -57,7 +57,7 @@
                         Entry List
                     </span>
                     <span class="badge badge-pill badge-light shadow-sm">
-                        11
+                        {{ $entryList->count() }}
                     </span>
                 </a>
             </li>
@@ -73,22 +73,13 @@
                     </h5>
                 </li>
                 <li>
-                    <a class="menu-item" href="{{ route('certificate.create') }}">
-                    <span>
-                        <i class="feather-user-plus mr-1"></i>
-                        Add Certificate
-                    </span>
-
-                    </a>
-                </li>
-                <li>
                     <a class="menu-item" href="{{ route('certificate.index') }}">
                     <span>
                         <i class="fas fa-users mr-1"></i>
                         Certificate List
                     </span>
                         <span class="badge badge-pill badge-light shadow-sm">
-                        14
+                         {{ $certificateList->count() }}
                     </span>
                     </a>
                 </li>

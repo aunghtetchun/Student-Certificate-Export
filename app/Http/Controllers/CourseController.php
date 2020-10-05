@@ -102,7 +102,7 @@ class CourseController extends Controller
 
             "title" => "required|min:2",
             "outline" => "required|min:10",
-            "frame" => "required|mimes:jpeg,png",
+            "frame" => "mimes:jpeg,png",
         ]);
 
         $course->title = $request->title;

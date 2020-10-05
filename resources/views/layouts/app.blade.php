@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('dashboard/css/summernote-bs4.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard/vendor/data_table/dataTables.bootstrap4.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard/vendor/venobox/venobox.css') }}">
+
 
     @yield('head')
 </head>
@@ -80,9 +82,14 @@
     <script src="{{ asset('dashboard/vendor/data_table/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('dashboard/vendor/data_table/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('dashboard/js/app.js') }}"></script>
+    <script src="{{ asset('dashboard/vendor/venobox/venobox.js') }}"></script>
+
 
     @yield('foot')
     <script>
+        $('.venobox').venobox({                        // default: ''
+            frameheight: screen.height-200,                                   // default: false
+        });
         $(".dataTables_length,.dataTables_filter,.dataTable,.dataTables_paginate,.dataTables_info").parent().addClass("px-0");
     </script>
 </body>

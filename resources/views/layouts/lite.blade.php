@@ -7,7 +7,7 @@
 
     <title>@yield("title")</title>
 
-    @include("f.meta")
+    @include("s.meta")
 
     <link rel="stylesheet" href="{{ asset('dashboard/css/chatbot.css') }}">
     <link rel="stylesheet" href="{{asset('dashboard/vendor/feather-icons-web/feather.css')}}">

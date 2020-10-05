@@ -5,7 +5,9 @@
             <div class="pb-3">
                 <a class="text-uppercase" href="{{ route('home') }}"><i class="feather-home"></i></a>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <a class="text-uppercase" href="{{ route('batch.index') }}">Batch List</a>
+                <span class="text-uppercase">BATCH</span>
+                <span class="mx-2"><i class="fas fa-angle-right"></i></span>
+                <a class="text-uppercase" href="{{ route('batch.index') }}">BATCH LIST</a>
             </div>
         </div>
         <div class="col-lg-12">
@@ -30,7 +32,7 @@
                             <th>Batch Number</th>
                             <th>Start</th>
                             <th>End</th>
-                            <th>User</th>
+                            <th>Uploader</th>
                             <th>Course</th>
                             <th>Control</th>
                             <th>Created</th>
@@ -56,7 +58,7 @@
                                     {{ $b->end }}
                                 </td>
                                 <td>
-                                    {{ $b->user_id }}
+                                    {{ $b->getAdmin->name }}
                                 </td>
                                 <td>
                                     {{ $b->getCourse->title }}

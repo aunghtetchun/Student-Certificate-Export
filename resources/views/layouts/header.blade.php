@@ -2,7 +2,7 @@
         <button class="btn btn-primary d-inline d-lg-none aside-menu-open mb-0">
             <i class="feather-menu fa-2x mb-0"></i>
         </button>
-        <form class="d-none d-md-block" action="{{ route('certificate.index') }}">
+    <form class="d-none d-md-block" action="{{ route('certificate.index') }}">
 
             <div class="form-inline">
 
@@ -12,8 +12,8 @@
                     </a>
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item text-uppercase" href="{{ route('certificate.create') }}">
-                            Add Certificate
+                        <a class="dropdown-item text-uppercase" href="{{ route('certificate.index') }}">
+                             Certificate List
                         </a>
                         <a class="dropdown-item text-uppercase" href="{{ route('course.create') }}">
                             Add Course
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="form-group mr-2">
-                    <input type="text" class="form-control" name="orderCode" placeholder="Find Certificate" required>
+                    <input type="text" class="form-control" name="cName" placeholder="Find Certificate" required>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-light">

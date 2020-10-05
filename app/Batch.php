@@ -11,4 +11,7 @@ class Batch extends Model
     {
         return $this->belongsTo('App\Course',"course_id");
     }
+    public function getAdmin(){
+        return $this->belongsTo("App\User","user_id");
+    }
 }

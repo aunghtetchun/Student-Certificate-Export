@@ -6,9 +6,9 @@
             <div class="pb-3">
                 <a class="text-uppercase" href="{{ route('home') }}"><i class="feather-home"></i></a>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Course</span>
+                <span class="text-uppercase">COURSE</span>
                 <span class="mx-2"><i class="fas fa-angle-right"></i></span>
-                <span class="text-uppercase">Edit Course</span>
+                <span class="text-uppercase">EDIT COURSE</span>
             </div>
         </div>
         <div class="col-12 col-md-10 col-lg-5">
@@ -26,8 +26,9 @@
                             <div class="alert alert-danger">{{ $error }}</div>
                         @endforeach
                     @endif
-                    <form action="{{ route('course.store') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('course.update',$course->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
+                        @method("PUT")
                         <div class="form-group mt-3">
                             <label for="frame">Course Frame</label>
                             <div class="form-inline p-0 d-flex justify-content-center align-items-center">

@@ -17,7 +17,8 @@ class EntryController extends Controller
      */
     public function index()
     {
-        return view('entry.index');
+        $entries=Entry::latest()->get();
+        return view('entry.index',compact('entries'));
     }
 
     /**
@@ -38,51 +39,7 @@ class EntryController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-
-            "name" => "required|min:2",
-            "nrc" => "required|min:10",
-            "photo" => "required|mimes:jpeg,png",
-            "access_id"=>"required",
-        ]);
-
-
-        $entry = new Entry();
-        $entry->name = $request->name;
-        $entry->nrc = $request->nrc;
-        $entry->access_ind = $request->access_id;
-
-        $previewDir='student/preview';
-        $oriDir = 'student/original';
-        $thumbDir='student/thumbnail';
-
-        if($request->hasFile('photo')) {
-
-            $newFileName = 'item_'.uniqid().'.'.$request->file('photo')->getClientOriginalExtension();
-            $request->file('photo')->move($previewDir, $newFileName);
-            $photo = $previewDir.$newFileName;
-
-            $img = Image::make(public_path($photo));
-            $img->orientate();
-            $img->resize(500, null, function($constraint){
-                $constraint->upsize();
-                $constraint->aspectRatio();
-            });
-
-            $oriImg = $oriDir.$newFileName;
-            $img->save(public_path($oriImg));
-
-            $img->fit(150,150);
-            $img->save(public_path($thumbDir.$newFileName));
-
-            $entry->photo = $newFileName;
-
-            File::delete(public_path($photo));
-        }
-        $entry->save();
-
-        return redirect()->route('f.index')->with("toast","Hi <b>$request->name</b>.Your certificate is successfully requested 😊");
-
+        //
     }
 
     /**
@@ -125,8 +82,12 @@ class EntryController extends Controller
      * @param  \App\Entry  $entry
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Entry $entry)
+    public function destroy( $id)
     {
-        //
+        $entry= Entry::find($id);
+//        return $entry;
+        $entry->delete();
+        return redirect()->route('entry.index')->with("toast","<b>$entry->name</b> is successfully deleted 😊");
+
     }
 }
