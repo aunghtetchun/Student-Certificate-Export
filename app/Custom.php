@@ -8,9 +8,9 @@ class Custom
 {
     public static $info =  [
 
-        "name" => "Student Certificate",
-        "short_name" => "Certificate",
-        "phone" => "09796519052",
+        "name" => "MMS Student Portal",
+        "short_name" => "Student Portal",
+        "phone" => "09250152018",
         "email_link" => "https://premium70.web-hosting.com:2096/",
         "facebook_link" => "https://www.facebook.com/kyalphyufashion/",
         "description" => "Welcome from Student Certificate Project",

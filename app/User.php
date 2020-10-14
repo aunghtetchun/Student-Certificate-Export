@@ -37,6 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function getRc(){
-        return $this->hasMany("App\Access","user_id");
+        return $this->hasMany(Access::class,"user_id");
+    }
+    public function  getCertificate(){
+        return $this->hasMany(Certificate::class,"user_id");
     }
 }

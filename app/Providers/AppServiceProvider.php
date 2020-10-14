@@ -36,6 +36,5 @@ class AppServiceProvider extends ServiceProvider
         View::share("accessList",Access::latest()->get());
         View::share("entryList",Entry::latest()->get());
         View::share("certificateList",Certificate::latest()->get());
-
     }
 }

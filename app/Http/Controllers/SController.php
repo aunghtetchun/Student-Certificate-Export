@@ -40,6 +40,7 @@ class SController extends Controller
             "access_id"=>"required",
         ]);
 
+        $realName = Auth::user()->name;
 
         $entry = new Entry();
         $entry->name = $request->name;
@@ -76,7 +77,7 @@ class SController extends Controller
         }
         $entry->save();
 
-        return redirect()->route('s.index')->with("toast","Hi <b>$request->name</b>.Your certificate is successfully requested 😊");
+        return redirect()->route('s.rc')->with("toast","Hi <b>$realName</b> ကျောင်းသားရဲ့ Certificate လျှောက်ထားခြင်း ပြီးမြောက်ပါပြီ။ Admin များမှ approve ပေးသည်နှင့် ထုတ်ယူနိုင်မှာဖြစ်ပါတယ်။");
 
     }
 

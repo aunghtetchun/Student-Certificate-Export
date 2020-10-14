@@ -25,7 +25,7 @@ Route::get('auth/facebook/callback', 'FacebookloginController@callback');
 
 Route::prefix("student")->middleware(["auth","isStudent"])->group(function (){
     Route::resource("/access","AccessController");
-    Route::get('/welcome',"SController@index")->name("s.index");
+    Route::get('/dashboard',"SController@index")->name("s.index");
     Route::get('/request-certificate',"SController@rc")->name("s.rc");
     Route::get("/entry/{id}","SController@entry")->name('s.entry');
     Route::post("/entry/store","SController@entry_store")->name('e.store');

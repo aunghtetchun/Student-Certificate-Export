@@ -44,6 +44,13 @@
   --text-theme-soft : #5c739f;
 }
 
+.text-theme{
+    color: var(--text-theme);
+}
+.text-theme-soft{
+    color: var(--text-theme-soft);
+}
+
 *,
 *::before,
 *::after {
