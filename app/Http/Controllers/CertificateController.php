@@ -152,6 +152,7 @@ class CertificateController extends Controller
 //        return "how are you";
         $certificate->save();
         $entry->delete();
+        $access->delete();
 
         return redirect()->route('entry.index')->with("toast","<b>$entry->name</b> is successfully Approved 😊");
 
