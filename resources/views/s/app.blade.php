@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{asset('dashboard/vendor/animate_it/animate.css')}}">
 {{--    <link rel="stylesheet" href="{{ asset('dashboard/css/summernote-bs4.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ asset('dashboard/vendor/data_table/dataTables.bootstrap4.min.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('dashboard/vendor/venobox/venobox.css') }}">
+
     <link rel="stylesheet" href="{{ asset('s/css/style.css') }}">
 
     @yield('head')
@@ -48,6 +50,8 @@
 <script src="{{ asset('dashboard/js/jquery.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="{{ asset('dashboard/js/bootstrap.js') }}"></script>
+<script src="{{ asset('dashboard/vendor/venobox/venobox.js') }}"></script>
+
 {{--<script src="{{ asset('dashboard/vendor/data_table/jquery.dataTables.min.js') }}"></script>--}}
 {{--<script src="{{ asset('dashboard/vendor/data_table/dataTables.bootstrap4.min.js') }}"></script>--}}
 <script src="{{ asset('s/js/app.js') }}"></script>

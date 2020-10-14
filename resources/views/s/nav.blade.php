@@ -9,6 +9,11 @@
         <a class="dropdown-item" href="{{ route('s.rc') }}">
             <i class="fas fa-box fa-fw mr-2"></i> Certificate 4 U
         </a>
+        <a class="dropdown-item" href="{{ route('s.list') }}">
+            <i class="fas fa-file-alt fa-fw mr-2"></i> Certificate List
+        </a>
+
+
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
             <i class="fas fa-lock-open fa-fw mr-2"></i> Logout

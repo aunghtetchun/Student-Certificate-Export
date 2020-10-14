@@ -9,7 +9,7 @@
                     <div class="d-flex justify-content-between align-items-center my-0 my-md-2">
                         <div class="">
                             <h1 class="dashboard-count font-weight-bolder text-theme display-4">
-                                0{{ Auth::user()->getRc->count() }}
+                                {{ Auth::user()->getRc->count() }}
                             </h1>
                             <p class="mb-0 text-theme-soft">Certificate For You</p>
                         </div>
@@ -23,12 +23,12 @@
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card v-spacer">
+            <div class="card v-spacer" onclick="go(`{{ route('s.list') }}`)">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center my-0 my-md-2">
                         <div class="">
                             <h1 class="dashboard-count font-weight-bolder text-theme display-4">
-                                0{{ Auth::user()->getCertificate->count() }}
+                                {{ Auth::user()->getCertificate->count() }}
                             </h1>
                             <p class="mb-0 text-theme-soft">Your Certificate</p>
                         </div>
@@ -47,13 +47,13 @@
                     <div class="d-flex justify-content-between align-items-center my-0 my-md-2">
                         <div class="">
                             <h1 class="dashboard-count font-weight-bolder text-theme display-4">
-                                02
+                                {{ \App\User::count() }}
                             </h1>
-                            <p class="mb-0 text-theme-soft">Your Project</p>
+                            <p class="mb-0 text-theme-soft">Our Students</p>
                         </div>
                         <div class="">
                             <div class="card-icon" style="background: var(--soft-primary)">
-                                <i class="fas fa-briefcase card-icon-size text-primary"></i>
+                                <i class="fas fa-users card-icon-size text-primary"></i>
                             </div>
                         </div>
                     </div>

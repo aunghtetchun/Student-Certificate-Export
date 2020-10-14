@@ -22,9 +22,13 @@ class SController extends Controller
     }
     public function entry($id)
     {
-        if (Auth::id()==Access::find($id)->user_id){
-            $access_id=$id;
-            return view('s.entry',compact('access_id'));
+        if(isset(Access::find($id)->user_id)){
+            if (Auth::user()->id == Access::find($id)->user_id){
+                $access_id=$id;
+                return view('s.entry',compact('access_id'));
+            }else{
+                abort(404);
+            }
         }else{
             abort(404);
         }
@@ -32,6 +36,14 @@ class SController extends Controller
     }
     public function entry_store(Request $request)
     {
+        if(isset(Access::find($request->id)->user_id)){
+            if (Auth::user()->id != Access::find($request->id)->user_id){
+                return redirect()->back()->withErrors(['access_id' => "Invalid Access Id"]);
+            }
+        }else{
+            return redirect()->back()->withErrors(['access_id' => "Invalid Access Id"]);
+        }
+
         $request->validate([
 
             "name" => "required|min:2",
