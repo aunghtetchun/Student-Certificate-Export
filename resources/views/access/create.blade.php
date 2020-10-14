@@ -36,7 +36,7 @@
                         <div class="form-row col-12 p-0 align-items-end">
                             <div class="form-group col-5">
                                 <label for="user_id">User Name</label>
-                                <select class="custom-select" name="user_id">
+                                <select class="search_select" name="user_id" style="width: 100%; vertical-align: middle;">
                                     <option selected disabled>Select User Name</option>
                                     @foreach($studentList as $sc)
                                         <option value="{{$sc->id}}">{{$sc->name}}</option>
@@ -69,4 +69,9 @@
 
 @endsection
 @section('foot')
+    <script>
+        $('.search_select').select2({
+
+        });
+    </script>
 @endsection

@@ -18,7 +18,11 @@
                     <th>Name</th>
                     <th>Nrc</th>
                     <th>Access Id</th>
-                    <th>Controls</th>
+                    <th class=" ">Controls
+                        <a href="" class="btn ml-3 btn-outline-success approve-all btn-sm">
+                            <i class="fas fa-check"></i> Approve All
+                        </a>
+                    </th>
                     <th>Created At</th>
                 </tr>
                 </thead>

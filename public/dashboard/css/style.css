@@ -340,3 +340,10 @@ div.dataTables_wrapper div.dataTables_info{
 ::-webkit-scrollbar-thumb:hover {
     background: #2d61ff;
 }
+.select2-selection__rendered{
+    height: 37px !important;
+    padding-top: 4px !important;
+}
+.select2-selection{
+    height: 37px !important;
+}

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('dashboard/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard/vendor/venobox/venobox.css') }}">
 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 
     @yield('head')
 </head>
@@ -83,6 +84,8 @@
     <script src="{{ asset('dashboard/vendor/data_table/dataTables.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('dashboard/js/app.js') }}"></script>
     <script src="{{ asset('dashboard/vendor/venobox/venobox.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
 
     @yield('foot')
