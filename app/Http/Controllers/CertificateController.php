@@ -144,7 +144,7 @@ class CertificateController extends Controller
 
             $c_img->fit(298,420)->orientate();
             $c_img_thumb_store=$thumbDir.$c_img_name;
-            $c_img->save(public_path($c_img_thumb_store));
+            $c_img->save(public_path($c_img_thumb_store)); 
             $certificate->file = $c_img_name;
 
         }
