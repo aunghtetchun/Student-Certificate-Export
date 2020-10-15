@@ -107,8 +107,9 @@ class CertificateController extends Controller
                 $font->valign('top');
                 $font->angle(0);
             });
-            $from=$entry->getAccess->getBatch->start;
-            $to=$entry->getAccess->getBatch->end;
+
+            $from=date("d M Y",strtotime($entry->getAccess->getBatch->start));
+            $to=date("d M Y",strtotime($entry->getAccess->getBatch->end));
 
             $text="From $from To $to";
             $c_img->text( $text, 260, 1470, function($font) {

@@ -80,7 +80,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="isCorrect" required>
-                                <label class="custom-control-label" for="isCorrect">အာလုံးမှန်ကန်ပါသည်</label>
+                                <label class="custom-control-label" for="isCorrect">အားလုံးမှန်ကန်ပါသည်</label>
                             </div>
                             <div class="">
                                 <button type="submit" class="btn btn-dark">

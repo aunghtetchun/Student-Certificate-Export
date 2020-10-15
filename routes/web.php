@@ -29,6 +29,7 @@ Route::prefix("student")->middleware(["auth","isStudent"])->group(function (){
     Route::get('/request-certificate',"SController@rc")->name("s.rc");
     Route::get("/entry/{id}","SController@entry")->name('s.entry');
     Route::post("/entry/store","SController@entry_store")->name('e.store');
+    Route::view("/list","s.list")->name("s.list");
 
 });
 
