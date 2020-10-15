@@ -36,8 +36,8 @@ class SController extends Controller
     }
     public function entry_store(Request $request)
     {
-        if(isset(Access::find($request->id)->user_id)){
-            if (Auth::user()->id != Access::find($request->id)->user_id){
+        if(isset(Access::find($request->access_id)->user_id)){
+            if (Auth::user()->id != Access::find($request->access_id)->user_id){
                 return redirect()->back()->withErrors(['access_id' => "Invalid Access Id"]);
             }
         }else{

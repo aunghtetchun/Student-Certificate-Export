@@ -61,7 +61,26 @@
                     </span>
                 </a>
             </li>
+            <li>
+                <div class="my-5"></div>
+            </li>
 
+            <li>
+                <h5 class="text-secondary">
+                    Student Management
+                </h5>
+            </li>
+            <li>
+                <a class="menu-item" href="{{ route('student.index') }}">
+                    <span>
+                        <i class="fas fa-users mr-1"></i>
+                        Student List
+                    </span>
+                    <span class="badge badge-pill badge-light shadow-sm">
+                         {{ $studentList->count() }}
+                    </span>
+                </a>
+            </li>
 
             <li>
                 <div class="my-5"></div>

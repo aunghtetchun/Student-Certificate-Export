@@ -50,7 +50,7 @@
                             $p = $percentage>100 ? 100 : $percentage;
 
                             @endphp
-                            <small class="font-weight-bold mb-2">Learn Progress {{ $p }}%</small>
+                            <small class="font-weight-bold mb-2">Learned Progress {{ $p }}%</small>
                             <div class="progress" style="height: 7px">
                                 <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{ $p }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>

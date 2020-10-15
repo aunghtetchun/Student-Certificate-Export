@@ -36,9 +36,11 @@ Route::prefix("student")->middleware(["auth","isStudent"])->group(function (){
 Route::prefix("panel")->middleware(["auth","isAdmin"])->group(function (){
 
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/student','HomeController@sList')->name('student.index');
     Route::resource("/batch","BatchController");
     Route::resource("/course","CourseController");
     Route::get("/certificate/{id}","CertificateController@store")->name('certificate.store');
+    Route::get("/certificate-store-all","CertificateController@storeAll")->name('certificate.storeAll');
     Route::get("/certificate","CertificateController@index")->name('certificate.index');
     Route::delete("/certificate/{id}","CertificateController@destroy")->name('certificate.destroy');
     Route::resource("/access","AccessController");

@@ -26,7 +26,7 @@
 
             @isset($rc)
                 @foreach($rc as $r)
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="card v-spacer">
                         <div class="card-body">
                             <h4 class="text-theme mb-3 font-weight-bold">မင်္ဂလာပါ {{ $r->getStudent->name }}</h4>

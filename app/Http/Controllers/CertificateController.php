@@ -34,15 +34,7 @@ class CertificateController extends Controller
 //        return view('certificate.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store($id)
-    {
-
+    public function save($id){
         $entry= Entry::find($id);
         $access= $entry->getAccess;
         $batch = $access->getBatch;
@@ -145,7 +137,7 @@ class CertificateController extends Controller
 
             $c_img->fit(298,420)->orientate();
             $c_img_thumb_store=$thumbDir.$c_img_name;
-            $c_img->save(public_path($c_img_thumb_store)); 
+            $c_img->save(public_path($c_img_thumb_store));
             $certificate->file = $c_img_name;
 
         }
@@ -154,9 +146,27 @@ class CertificateController extends Controller
         $certificate->save();
         $entry->delete();
         $access->delete();
+    }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store($id)
+    {
 
-        return redirect()->route('entry.index')->with("toast","<b>$entry->name</b> is successfully Approved 😊");
 
+        $this->save($id);
+        return redirect()->route('entry.index')->with("toast","Student approve Successfully 😊");
+
+    }
+    public function storeAll(){
+        $all_entry=Entry::all();
+        foreach ($all_entry as $ae){
+            $this->save($ae->id);
+        }
+        return redirect()->route('certificate.index')->with("toast","All Students approve Successfully 😊");
     }
 
     /**

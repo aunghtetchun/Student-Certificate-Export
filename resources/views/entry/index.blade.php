@@ -19,7 +19,7 @@
                     <th>Nrc</th>
                     <th>Access Id</th>
                     <th class=" ">Controls
-                        <a href="" class="btn ml-3 btn-outline-success approve-all btn-sm">
+                        <a href="{{ route('certificate.storeAll')}}" class="btn ml-3 btn-outline-success approve-all btn-sm">
                             <i class="fas fa-check"></i> Approve All
                         </a>
                     </th>

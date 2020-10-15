@@ -36,16 +36,20 @@
                         <div class="form-row col-12 p-0 align-items-end">
                             <div class="form-group col-5">
                                 <label for="user_id">User Name</label>
-                                <select class="search_select" name="user_id" style="width: 100%; vertical-align: middle;">
+                                <select class="custom-select search_user"  name="user_id" style="width: 100%; vertical-align: middle;">
                                     <option selected disabled>Select User Name</option>
                                     @foreach($studentList as $sc)
-                                        <option value="{{$sc->id}}">{{$sc->name}}</option>
+                                        @if(isset($_GET['user_id']))
+                                        <option value="{{$sc->id}}" {{ $_GET['user_id']==$sc->id?"selected":"" }}>{{$sc->name}}</option>
+                                        @else
+                                            <option value="{{$sc->id}}" >{{$sc->name}}</option>
+                                        @endisset
                                     @endforeach
                                 </select>
                             </div>
                             <div class="form-group col-5">
                                 <label for="batch_id">Batch Number</label>
-                                <select class="custom-select" name="batch_id">
+                                <select class="custom-select search_batch" name="batch_id" style="width: 100%; vertical-align: middle;">
                                     <option selected disabled>Select Batch Number</option>
                                     @foreach($batchList as $b)
                                         <option value="{{$b->id}}">{{$b->batch_number}}</option>
@@ -73,5 +77,9 @@
         $('.search_select').select2({
 
         });
+        $('.search_batch').select2({
+
+        });
+
     </script>
 @endsection
